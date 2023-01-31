@@ -115,3 +115,10 @@ input:invalid:required {
     border-color: red;
 }
 
+#logoBanner {
+    background-color: black;
+    opacity: 0.4;
+    height: 20%;
+    margin-top: 25%;
+    
+}
