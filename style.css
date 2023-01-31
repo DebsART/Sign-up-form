@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
-    flex:1;
+    flex:0, 0, 0;
     justify-content: center;
     align-items: center;
 }
@@ -32,6 +32,9 @@ body {
     margin-top: 7%;
     background-color: #F2F2F2;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 fieldset{
@@ -65,7 +68,7 @@ form{
     background-color: white;
     padding-left:6.5%;
     position: relative;
-    width: 110%;
+    width: 100%;
     margin-left: -7.5%;
     box-shadow: 2px 5px 20px lightgray;
 }
@@ -110,14 +113,15 @@ label {
 
 .headerText {
     width:70%;
+    margin-left: -31%;
 }
 
-input:valid:required {
-     border-color:#596D48;
+input[type="password"]:required:valid + label {
+     color:#596D48;
 }
 
-input:invalid:required {
-    border-color: red;
+.input[type="password"]:required:invalid + label {
+    color: red;
 }
 
 #logoBanner {
@@ -150,4 +154,6 @@ img {
 
 .logIn {
     margin-bottom: 20%;
+    margin-right:auto;
+    padding-left: 0%;
 }
