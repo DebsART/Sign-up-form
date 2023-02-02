@@ -2,18 +2,21 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
-    flex:0, 0, 0;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    overflow-x:scroll;
     width: 100vw;
     height: 100vh;
     justify-content: space-around;
 }
+
+
 
 .leftSide {
     width:50%;
@@ -33,6 +36,7 @@ body {
     background-color: #F2F2F2;
     position: relative;
     display: flex;
+    flex-flow: column nowrap;
     flex-direction: column;
     align-items: center;
     width: 60vw;
@@ -41,9 +45,9 @@ body {
 fieldset{
     display: flex;
     flex-direction: row;
-    border: none;
+    border: none; 
     gap: 70px;
-    margin-bottom: -2%;
+    width:45%;
 }
 
 label,
@@ -63,17 +67,18 @@ input {
     border: 1px;
     border-color: lightgray;
     box-shadow: 2px 2px 10px lightgray;
+    height: 100%;
 }
 
 form{
-    margin-top: 10vh;
+    margin-top: 10%;
     background-color: white;
     padding-left:6.5%;
     position: relative;
     width: 100%;
-    height: 100%;
-    margin-left: -7.5%;
+    margin-left: -8%;
     box-shadow: 2px 5px 20px lightgray;
+  
 }
 
 .form_group{
@@ -95,6 +100,7 @@ button {
     box-shadow: 2px 2px 10px lightgrey;
     text-align: center;
     border-radius: 5px;
+    max-height: 10%;
 }
 
 p{   
@@ -119,12 +125,16 @@ label {
     margin-left: -31%;
 }
 
-input[type="password"]:required:valid + label {
-     color:#596D48;
+[type="password"],
+input:focus,
+input:valid {
+     border-color:2px cornflowerblue;
 }
 
-.input[type="password"]:required:invalid + label {
-    color: red;
+[type="password"],
+input:focus,
+input:invalid   {
+    border-color: 2px red;
 }
 
 #logoBanner {
@@ -134,7 +144,7 @@ input[type="password"]:required:valid + label {
     align-items: center;
     padding-right: 3%;
     background-color:rgba(0, 0, 0, 0.5);
-    height: 20%;
+    max-height: 20%;
     margin-top: 17.5%;
     width: 97%;
 }
